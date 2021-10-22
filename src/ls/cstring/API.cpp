@@ -7,7 +7,8 @@ namespace ls
 {
     namespace cstring
     {
-        API api;
+	cstring::API api;
+
         char *API::append(char *dst, const char *src)
         {
             while(*src)
@@ -38,5 +39,13 @@ namespace ls
                 result.append(*it);           
             return result;
         }
+
+	string API::suffix(const string &str)
+	{
+		auto dot = str.find(".");
+		if(dot == string::npos)
+			return "";
+		return str.substr(dot + 1);
+	}
     }
 }

@@ -2,14 +2,16 @@
 #include "iostream"
 
 using namespace std;
+using namespace ls;
 
 int main()
 {
-	ls::cstring::API api;
 	char a[20], *next = a;
-	next = api.append(next, "123");
+	next = cstring::api.append(next, "123");
 	cout << a << endl;
-	next = api.append(next, "456");
+	next = cstring::api.append(next, "456");
 	cout << a << endl;
+	string b = "123.html";
+	cout << cstring::api.suffix(b) << endl;
 	return 0;
 }

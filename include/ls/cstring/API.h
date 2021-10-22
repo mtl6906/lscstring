@@ -13,9 +13,9 @@ namespace ls
                 char *append(char *dst, const char *src);
                 char *append(char *dst, const char *src, int n);
                 std::string merge(std::initializer_list<std::string> l);
-        };
-        
-        extern API api;
+		std::string suffix(const std::string &str);
+	};
+	extern API api;
     }
 }
 
